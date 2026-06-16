@@ -370,7 +370,7 @@ async def main():
 
     await app.initialize()
     await app.start()
-    await app.updater.start_polling()
+    await app.updater.start_polling(allowed_updates=Update.ALL_TYPES)
 
     logger.info("🤖 Matching PfP Bot started!")
     await scheduler(app)
